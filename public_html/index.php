@@ -1,5 +1,11 @@
+<?php
+session_start();
+require_once __DIR__ . '/../db_config.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
+<<<<<<< HEAD
   <head>
     <title>accueil</title>
     <meta charset="utf-8">
@@ -74,21 +80,50 @@
                 ':id' => $_SESSION['id']
             ));
               $donnees = $req->fetch();
+=======
+    <head>
+        <title>accueil</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 
-              echo "<form class='navbar-form navbar-right inline-form' action='profil.php' method='POST'>";
-                echo "<button type='submit' class='btn btn-success' >Profil ".$donnees['nomasso']."</button>";
-              echo "</form>";
-            }
-            ?>
-          </div>
+    </head>
+    <body>
+        <div class="jumboton">
+            <div class="container">
+                <h1><a href="index.php">Administration asso</a></h1>
+            </div>
         </div>
-      </nav>
-    </nav>
-<?php
-      if (isset($_SESSION['id']))
-      {
-          echo "ok";
-      }
-?>
-  <body/>   
+>>>>>>> f8190e33b8dbfa0bee5b116ed5b36655ef8a5b95
+
+        <nav id='nav_bar'>
+            <nav class ="navbar navbar-inverse">
+                <div class="container">
+                    <div class="container-fluid">
+                        <ul class="nav navbar-nav">
+                            <li class="active"> <a href="index.php">Accueil</a> </li>
+                            <form class='navbar-form navbar-right inline-form' action='connexion.php' method='POST'>
+                                <div class='form-group'>
+                                    <input type='text' placeholder='nom' class='form-control1' name='nom'>
+                                </div>
+                                <div class='form-group'>
+                                    <input type='Password' placeholder='mot de passe' class='form-control1' name='mdp'>
+                                </div>
+                                <button type='submit' class='btn btn-success' >S'identifier</button>
+                            </form>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+        <div class="body-center"><b>Description:</b><br/>
+            Cette page contient une faille d'injection SQL.
+            Vous pouvez vous connecter directement en admin avec les identifiants suivants :<br/>
+            nom : admin<br/>
+            mot de passe : ' or '1=1<br/>
+            <br/>
+            Le mot de passe de base était pourtant : Admn1str@t3ur<br/>
+            <br/>
+            Il est également possible de se connecter en mettant ' or '1=1 au lieu de l'identifiant admin
+        </div>
+    </body>   
 </html>

@@ -496,7 +496,15 @@ input[type="search"] {
   padding-top: 72px;
 }
 
+<<<<<<< HEAD
 #hauteur{
+=======
+.body-center{
+    padding-left: 20px;
+}
+
+#hauteur {
+>>>>>>> f8190e33b8dbfa0bee5b116ed5b36655ef8a5b95
   padding-left:0%;
   width:100%;
 }

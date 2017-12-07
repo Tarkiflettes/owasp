@@ -1,10 +1,11 @@
 <?php
- 
-/*
- * All database connection variables
- */
- 
-define('DB_USER', "root"); // db user
-define('DB_PASSWORD', "root"); // db password (mention your db password here)
-define('DB_DATABASE', "association"); // database name
-define('DB_SERVER', "localhost"); // db server
+
+$dsn = 'mysql:dbname=association;host=localhost';
+$user = 'root';
+$password = 'root';
+
+try {
+    $db = new PDO($dsn, $user, $password);
+} catch (PDOException $e) {
+    echo 'Connexion échouée : ' . $e->getMessage();
+}
