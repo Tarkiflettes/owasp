@@ -11,7 +11,7 @@
                             <a href="news.php">news</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/calendrier.php'){ echo 'active';} ?>">
-                            <a href="calendrier.php">calendrier</a>
+                            <a href="include.php">calendrier</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/membres.php'){ echo 'active';} ?>">
                             <a href="membres.php">membres</a>
