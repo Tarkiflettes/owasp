@@ -44,7 +44,9 @@ require_once __DIR__ . '/../db_config.php';
             nom : admin<br/>
             mot de passe : ' or '1=1<br/>
             <br/>
-            Le mot de passe de base était pourtant : Admn1str@t3ur
+            Le mot de passe de base était pourtant : Admn1str@t3ur<br/>
+            <br/>
+            Il est également possible de se connecter en mettant ' or '1=1 au lieu de l'identifiant admin
         </div>
     </body>   
 </html>
