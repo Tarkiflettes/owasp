@@ -1,0 +1,89 @@
+﻿@font-face {
+    font-family: 'nasalizationregular';
+    src: url('font/nasalizationregular/nasalization-rg-webfont.eot');
+    src: url('font/nasalizationregular/nasalization-rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/nasalizationregular/nasalization-rg-webfont.woff2') format('woff2'),
+         url('font/nasalizationregular/nasalization-rg-webfont.woff') format('woff'),
+         url('font/nasalizationregular/nasalization-rg-webfont.ttf') format('truetype'),
+         url('font/nasalizationregular/nasalization-rg-webfont.svg#nasalizationregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RoadRage';
+    src: url('font/roadrageregular/RoadRage.eot');
+    src: url('font/roadrageregular/RoadRage.eot?#iefix') format('embedded-opentype'),
+            url('font/roadrageregular/RoadRage.woff') format('woff'),
+            url('font/roadrageregular/RoadRage.ttf') format('truetype'),
+            url('font/roadrageregular/RoadRage.svg#RoadRage') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_FuturaTLig';
+	src: url('font/Futura/FuturaTLig.eot');
+	src: url('font/Futura/FuturaTLig.woff') format('woff'), 
+             url('font/Futura/FuturaTLig.ttf') format('truetype'), 
+             url('font/Futura/FuturaTLig.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin:0;
+    background: url(../image/background.jpg) no-repeat center fixed; 
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
+    background-size: cover; /* version standardisée */
+    padding: 0;
+}
+#page-table {
+    height: 100%;
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+#page-td {
+    height: 100%;
+    padding: 0;
+    vertical-align: middle;
+}
+div#global {
+    width: 900px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.nasalization-police{
+    font-family: nasalizationregular;
+}
+
+.roadRage-police{
+    font-family: RoadRage;
+}
+
+.text-compteur{
+    color: black; 
+    font-size: 80px;
+    text-align: center;
+}
+
+
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
