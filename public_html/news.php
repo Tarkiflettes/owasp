@@ -87,17 +87,24 @@
 <?php
       if (isset($_SESSION['id']))
       {
-
-        if($_SESSION['id'] == -1)
-          $news = $db->query("SELECT * FROM products INNER JOIN nomasso ON products.asso = nomasso.idasso ORDER BY products.id DESC");
-        else
+          
+          //news
+        if(isset($_POST['nom']) AND !empty($_POST['nom']) && isset($_POST['desc']) AND !empty($_POST['desc']))
         {
-          $news = $db->prepare("SELECT * FROM products WHERE asso = :id ORDER BY id DESC");
+          $nom = $_POST['nom'];
+          $desc = $_POST['desc'];
+          $asso = $_POST['asso'];
+          
+          $req = $db->prepare("INSERT INTO products (name, description, asso) VALUES (:nom, :desc, :asso)");
 
-                $news->execute(array(
-                  ':id' => $_SESSION['id']
-              ));
+            $success = $req->execute(array(
+                ':nom' => $nom,
+                ':desc' => $desc,
+                ':asso' => $asso
+            ));
         }
+        
+          $news = $db->query("SELECT * FROM products INNER JOIN nomasso ON products.asso = nomasso.idasso ORDER BY products.id DESC");
         ?>
 
         <table border="2" cellpadding="1" cellspacing="1" style="width:100%; text-align:center ">
@@ -106,17 +113,7 @@
             <td>description</br></td>
             <td>date</br></td>
             <td>image</br></td>
-            <?php
-                if($_SESSION['id'] == -1)
-                {
-                ?>
-
-                <td>idasso</br></td>
-
-                <?php
-                }
-                ?>
-            <td>modifier</br></td>
+            <td>idasso</br></td>
         </tr>
         <tbody>
         <?php
@@ -129,27 +126,47 @@
           <td> <?php echo $donnees[2]?></br></td>
           <td> <?php echo $donnees[3]?></br></td>
           <td><img src= "images_de_l'application/<?php echo $donnees[4]?>" alt="titre" height="100" width="200"/></td>
-
-          <?php
-                if($_SESSION['id'] == -1)
-                {
-                ?>
-
-                <td> <?php echo $donnees['nomasso']?></br></td>
-
-                <?php
-                }
-                ?>
-
-          <td> 
-            <form action="modifiernews.php" method="POST"> 
-            <input type="hidden" name="id" value="<?php echo $donnees[0];?>" />
-            <input type="submit" name="modifier" value="modifier"/> 
-            </form></br></td>
+          <td> <?php echo $donnees['nomasso']?></br></td>
           </tr>
           <?php
         }
-      $news->closeCursor();      
+        ?></table><?php
+      $news->closeCursor();   
+      $asso = $db->query("SELECT * FROM nomasso");
+      ?>
+            <div id="hauteur">
+            <form action="news.php" method="POST" enctype="multipart/form-data">
+              <div id="formulaire">
+                <h1>Ajouter news</h1>
+                <label>nom</label>
+                <input type="text" name="nom" id="champs"  required autofocus />
+                <label>contenu</label>
+                <td colspan="2"><textarea name="desc" cols="50" rows="2" id ="champs1"></textarea></td>
+
+                <label>Asso</label>
+                  <select name="asso" id="champ">
+                    <option value="0"></option>
+                  <?php
+                  while ($donnees = $asso->fetch()) // On boucle pour afficher toutes les données et on met toutes données dans un tableau
+                  {
+                    ?>
+                    <option value="<?php echo $donnees[1];?>"><?php echo $donnees[3];?></option>
+                    <?php
+                  }
+                  ?>
+                  </select></br>
+
+                <label>
+                  <div id="rouge"> !!! attention l'image doit faire 600px par 300px ou le même ratio!!! </div>
+                </label>
+                <input type="file" name="avatar">
+
+
+                <input type="submit" id="inscrire1" value="AJOUTER"/>
+              </div> 
+             </form> 
+          </div>
+          <?php
       }
       else
     header('Location: index.php');
