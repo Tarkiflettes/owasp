@@ -5,10 +5,14 @@
   
   $db = new PDO('mysql:host='.DB_SERVER.';dbname='.DB_DATABASE, DB_USER, DB_PASSWORD) or die(mysql_error());
   
+  echo 'plop';die;
   if (isset($_POST['nom']) && isset($_POST['mdp'])) 
   {
+      
 
-    $reponse = $db->exec("SELECT * FROM nomasso"); 
+    
+      
+      $reponse = $db->exec("SELECT * FROM compte WHERE nom = $_POST['nom'] && mdp = $_POST['mdp']"); 
     
     
     
@@ -21,4 +25,4 @@
     $reponse->closeCursor();
   }
   
-  header('Location: index.php');
+  //header('Location: index.php');
