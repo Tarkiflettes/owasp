@@ -112,7 +112,6 @@
             <td>titre</br></td>
             <td>description</br></td>
             <td>date</br></td>
-            <td>image</br></td>
         </tr>
         <tbody>
         <?php
