@@ -104,7 +104,7 @@
             ));
         }
         
-          $news = $db->query("SELECT * FROM products INNER JOIN nomasso ON products.asso = nomasso.idasso ORDER BY products.id DESC");
+          $news = $db->query("SELECT * FROM products ORDER BY products.id DESC");
         ?>
 
         <table border="2" cellpadding="1" cellspacing="1" style="width:100%; text-align:center ">
@@ -113,7 +113,6 @@
             <td>description</br></td>
             <td>date</br></td>
             <td>image</br></td>
-            <td>idasso</br></td>
         </tr>
         <tbody>
         <?php
@@ -125,8 +124,6 @@
           <td> <?php echo $donnees[1]?></br></td>
           <td> <?php echo $donnees[2]?></br></td>
           <td> <?php echo $donnees[3]?></br></td>
-          <td><img src= "images_de_l'application/<?php echo $donnees[4]?>" alt="titre" height="100" width="200"/></td>
-          <td> <?php echo $donnees['nomasso']?></br></td>
           </tr>
           <?php
         }
@@ -142,26 +139,7 @@
                 <input type="text" name="nom" id="champs"  required autofocus />
                 <label>contenu</label>
                 <td colspan="2"><textarea name="desc" cols="50" rows="2" id ="champs1"></textarea></td>
-
-                <label>Asso</label>
-                  <select name="asso" id="champ">
-                    <option value="0"></option>
-                  <?php
-                  while ($donnees = $asso->fetch()) // On boucle pour afficher toutes les données et on met toutes données dans un tableau
-                  {
-                    ?>
-                    <option value="<?php echo $donnees[1];?>"><?php echo $donnees[3];?></option>
-                    <?php
-                  }
-                  ?>
-                  </select></br>
-
-                <label>
-                  <div id="rouge"> !!! attention l'image doit faire 600px par 300px ou le même ratio!!! </div>
-                </label>
-                <input type="file" name="avatar">
-
-
+                
                 <input type="submit" id="inscrire1" value="AJOUTER"/>
               </div> 
              </form> 
