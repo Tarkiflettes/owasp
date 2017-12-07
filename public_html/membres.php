@@ -87,11 +87,7 @@
 <?php
       if (isset($_SESSION['id']))
       {
-
-        if($_SESSION['id'] == -1)
-          $news = $db->query("SELECT * FROM membresasso INNER JOIN nomasso ON membresasso.asso = nomasso.idasso ORDER BY membresasso.asso ASC , membresasso.rang ASC");
-        else
-        $news = $db->query("SELECT * FROM membresasso WHERE asso = '".$_SESSION['id']."' ORDER BY rang ASC");
+          $news = $db->query("SELECT * FROM membresasso ORDER BY membresasso.rang ASC");
         ?>
 
         <table border="2" cellpadding="1" cellspacing="1" style="width:100%; text-align:center ">

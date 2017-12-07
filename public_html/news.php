@@ -106,7 +106,15 @@
         
           $news = $db->query("SELECT * FROM products ORDER BY products.id DESC");
         ?>
-
+<div class="body-center"><b>Description:</b><br/>
+            Cette page contient une faille XSS.
+            Vous pouvez ajouter une news <br/>
+            avec la faille suivante : <script>alert(Oh tiens, une faille xss);</script>
+            <br/>
+            Une fenêtre d'alerte s'affiche alors sur la page<br/><br/><br/>
+            
+            
+      
         <table border="2" cellpadding="1" cellspacing="1" style="width:100%; text-align:center ">
         <tr>
             <td>titre</br></td>
@@ -143,7 +151,9 @@
               </div> 
              </form> 
           </div>
+      
           <?php
+          
       }
       else
     header('Location: index.php');
