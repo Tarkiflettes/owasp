@@ -18,32 +18,16 @@ require_once __DIR__ . '/../db_config.php';
                 <h1><a href="index.php">Administration asso</a></h1>
             </div>
         </div>
-
-        <nav id='nav_bar'>
-            <nav class ="navbar navbar-inverse">
-                <div class="container">
-                    <div class="container-fluid">
-                        <ul class="nav navbar-nav">
-                            <li class="active"> <a href="index.php">Accueil</a> </li>
-                            <form class='navbar-form navbar-right inline-form' action='connexion.php' method='POST'>
-                                <div class='form-group'>
-                                    <input type='text' placeholder='nom' class='form-control1' name='nom'>
-                                </div>
-                                <div class='form-group'>
-                                    <input type='Password' placeholder='mot de passe' class='form-control1' name='mdp'>
-                                </div>
-                                <button type='submit' class='btn btn-success' >S'identifier</button>
-                            </form>
-                    </div>
-                </div>
-            </nav>
-        </nav>
+        <?php include('menu.php'); ?>
         <div class="body-center"><b>Description:</b><br/>
             Ce serveur contient une section securisée réservée aux administrateurs.<br/>
             Cette page est située à l'adresse <?php echo $urlsite; ?>admin <br/>
             Pour y accéder, il existe un htaccess de protection.<br/>
             Malheureusement, les administrateurs n'ont pas patchés la faille htaccess.<br/>
             
+            Pour y accéder, il suffit d'installer sur son ordinateur un petit logiciel appelé "Burp Suite".<br/>
+            Vous changer ensuite la requête http en mettant n'importe une chaine de caractère à la place de "GET" dans la requête.<br/>
+            Vous avez ensuite accès à la page.
         </div>
     </body>   
 </html>
