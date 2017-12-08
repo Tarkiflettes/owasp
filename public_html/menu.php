@@ -8,13 +8,13 @@
                     </li>
                     <?php if(isset($_SESSION['id'])):?>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/news.php'){ echo 'active';} ?>">
-                            <a href="news.php">faille XSS</a>
+                            <a href="news.php">Faille XSS</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/include.php?url=tableau.php'){ echo 'active';} ?>">
                             <a href="include.php?url=tableau.php">Faille include</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/membres.php'){ echo 'active';} ?>">
-                            <a href="membres.php?membreId=1">injection SQL</a>
+                            <a href="membres.php?membreId=1">Injection SQL</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/partenariats.php'){ echo 'active';} ?>">
                             <a href="partenariats.php">Faille API</a>

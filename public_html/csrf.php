@@ -14,6 +14,16 @@ require_once __DIR__ . '/../db_config.php';
     <body>
 
         <?php
+        if(isset($_GET['newsId'])){
+            $req = $db->prepare("DELETE FROM calendrier WHERE id = :id");
+
+            $req->execute(array(
+                ':id' => $_GET['newsId']
+            ));
+            
+            $donnees = $req->fetch();
+        }
+        
         $newsList = $db->query("SELECT * FROM calendrier");
         ?>
 
