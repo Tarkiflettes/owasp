@@ -29,13 +29,6 @@
                     <?php endif ?>
                 </ul>
 
-                <?php
-                $req = $db->prepare("SELECT * FROM nomasso WHERE idasso = :id");
-
-                $req->execute(array(':id' => $_SESSION['id']));
-                $donnees = $req->fetch();
-                ?>
-
                 <?php if (!isset($_SESSION['id'])): ?>
 
                     <form class='navbar-form navbar-right inline-form' action='connexion.php' method='POST'>
@@ -55,7 +48,7 @@
                         <button type='submit' class='btn btn-success' >Deconnexion</button>
                     </form>
                     <form class='navbar-form navbar-right inline-form' action='profil.php' method='POST'>
-                        <button type='submit' class='btn btn-success' >Profil <?= $donnees['nomasso'] ?></button>
+                        <button type='submit' class='btn btn-success' >Profil</button>
                     </form>
                 <?php endif ?>
                 ?>
