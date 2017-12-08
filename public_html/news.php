@@ -21,70 +21,8 @@
       </div>
     </div>
 
-    <nav id='nav_bar'>
-      <nav class ="navbar navbar-inverse">
-        <div class="container">
-          <div class="container-fluid">
-            <ul class="nav navbar-nav">
-              <li> <a href="index.php">Accueil</a> </li>
-
-
-              <?php
-               if (isset($_SESSION['id']))
-              {              
-                ?>
-                <li class = "active"> <a href="news.php">news</a> </li>
-                <li> <a href="calendrier.php">calendrier</a> </li>
-                <li> <a href="membres.php">membres</a> </li>
-                <li> <a href="partenariats.php">partenariats</a> </li>
-                <li> <a href="notif.php">notif</a> </li>
-                <?php
-                if($_SESSION['id'] == -1){
-                  echo "<li> <a href='comptes.php'>comptes</a> </li>";
-                }
-              }
-              ?>
-            </ul>
-
-
-            <?php
-            if (!isset($_SESSION['id'])){
-
-              echo "<form class='navbar-form navbar-right inline-form' action='connexion.php' method='POST'>";
-                echo "<div class='form-group'>";
-                  echo "<input type='text' placeholder='nom' class='form-control1' name='nom'>";
-                echo "</div>";
-                echo "<div class='form-group'>";
-                  echo "<input type='Password' placeholder='mot de passe' class='form-control1' name='mdp'>";
-                echo "</div>";
-                echo "<button type='submit' class='btn btn-success' >S'identifier</button>";
-              echo "</form>";
-
-               
-            }
-            else{
-
-              echo "<form class='navbar-form navbar-right inline-form' action='deconnexion.php' method='POST'>";
-                echo "<button type='submit' class='btn btn-success' >Deconnexion</button>";
-              echo "</form>";
-
-              $req = $db->prepare("SELECT * FROM nomasso WHERE idasso = :id");
-
-              $req->execute(array(
-                ':id' => $_SESSION['id']
-            ));
-              $donnees = $req->fetch();
-
-              echo "<form class='navbar-form navbar-right inline-form' action='rofil.php' method='POST'>";
-                echo "<button type='submit' class='btn btn-success' >Profil ".$donnees['nomasso']."</button>";
-              echo "</form>";
-            }
-            ?>
-          </div>
-        </div>
-      </nav>
-    </nav>
-<?php
+    <?php include('menu.php'); 
+    
       if (isset($_SESSION['id']))
       {
           
@@ -93,14 +31,12 @@
         {
           $nom = $_POST['nom'];
           $desc = $_POST['desc'];
-          $asso = $_POST['asso'];
           
-          $req = $db->prepare("INSERT INTO products (name, description, asso) VALUES (:nom, :desc, :asso)");
+          $req = $db->prepare("INSERT INTO products (name, description) VALUES (:nom, :desc)");
 
             $success = $req->execute(array(
                 ':nom' => $nom,
-                ':desc' => $desc,
-                ':asso' => $asso
+                ':desc' => $desc
             ));
         }
         
@@ -108,8 +44,8 @@
         ?>
 <div class="body-center"><b>Description:</b><br/>
             Cette page contient une faille XSS.
-            Vous pouvez ajouter une news <br/>
-            avec la faille suivante : <script>alert(Oh tiens, une faille xss);</script>
+            Vous pouvez ajouter une news <br/>></script>
+avec la faille suivante : "&lt;script&gt;alert(Oh tiens, une faille xss);&lt;/script&gt;"
             <br/>
             Une fenêtre d'alerte s'affiche alors sur la page<br/><br/><br/>
             
@@ -136,7 +72,6 @@
         }
         ?></table><?php
       $news->closeCursor();   
-      $asso = $db->query("SELECT * FROM nomasso");
       ?>
             <div id="hauteur">
             <form action="news.php" method="POST" enctype="multipart/form-data">
