@@ -34,7 +34,7 @@ require_once __DIR__ . '/../db_config.php';
         Il existe un répertoire protégé par un htaccess (/admin).<br/>
         L'attaquant peut donc faire un fichier php contenant uniquement la ligne ci-dessous sur son serveur et l'executer en mettant l'url en get.
         <br/><br/>
-        par exemple noux avons créé un fichier test.php nous l'ajoutons à l'URL : <font color="red"><?= $urlsite;?>owasp/public_html/include.php?url=test.php</font> <br/><br/>
+        par exemple noux avons créé un fichier test.php nous l'ajoutons à l'URL : <font color="red"><?= $urlsite;?>include.php?url=test.php</font> <br/><br/>
         <br/>
         <b>Script : </b><br/>
             echo file_get_contents('./admin/.htpasswd');<br/>
