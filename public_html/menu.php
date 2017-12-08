@@ -11,10 +11,10 @@
                             <a href="news.php">news</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/include.php?url=tableau.php'){ echo 'active';} ?>">
-                            <a href="include.php?url=tableau.php">Faille include</a>
+                            <a href="include.php?url=tableau.php">calendrier</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/membres.php'){ echo 'active';} ?>">
-                            <a href="membres.php">membres</a>
+                            <a href="membres.php?membreId=1">membres</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/partenariats.php'){ echo 'active';} ?>">
                             <a href="partenariats.php">partenariats</a>
