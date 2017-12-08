@@ -11,3 +11,7 @@ try {
 } catch (PDOException $e) {
     echo 'Connexion échouée : ' . $e->getMessage();
 }
+
+if(!isset($_SESSION['id'])){
+    header ('location: index.php');
+}
