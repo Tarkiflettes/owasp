@@ -26,15 +26,7 @@ require_once __DIR__ . '/../db_config.php';
 
         <?php include("menu.php"); ?>
         Cette page sert habituellement à pouvoir consulter mon phpinfo. <br/>
-        <div>
-        <?php
-            $ev = $_GET['ev'];
-            eval('$output = ' . $_GET['ev'] . ';');
-            
-        ?>  
-        </div>
         
-
         <br/><br/>
         <b>Description: </b>
         Cette page contient une faille eval().<br/>
@@ -44,7 +36,14 @@ require_once __DIR__ . '/../db_config.php';
         <b>POC:</b> 
         Pour tester, changer le "phpinfo(); en system('cat /etc/passwd')<br/><br/>
         Cette faille est très rare sur internet, mais elle permet cependant de controller totalement la machine et de faire une escalation de privilège par la suite.<br/>
-
-
+        
+        <div>
+        <?php
+            $ev = $_GET['ev'];
+            eval('$output = ' . $_GET['ev'] . ';');
+            
+        ?>  
+        </div>
+        
     </body>   
 </html>
