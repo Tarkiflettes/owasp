@@ -1,0 +1,49 @@
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 04h45
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 04h51
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h01
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h05
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h09
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h09
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h10
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h14
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h14
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h24
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h25
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 05h35
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------
