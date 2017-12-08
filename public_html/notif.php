@@ -21,7 +21,7 @@ require_once __DIR__ . '/../db_config.php';
         <?php include('menu.php'); ?>
         <div class="body-center"><b>Description:</b><br/>
             Ce serveur contient une section securisée réservée aux administrateurs.<br/>
-            Cette page est située à l'adresse <?php echo $urlsite; ?>admin <br/>
+            Cette page est située à l'adresse <font color="red"><?php echo $urlsite; ?>owasp/public_html/admin <br/></font>
             Pour y accéder, il existe un htaccess de protection.<br/>
             Malheureusement, les administrateurs n'ont pas patchés la faille htaccess.<br/>
             

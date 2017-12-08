@@ -27,7 +27,7 @@
           <div class="body-center"><b>Description:</b><br/>
               Cette page contient une faille d injection SQL dans une URL.<br>
             
-            pour exploiter la faille, utilisez cete faille : <font color="red"><?= $urlsite;?>/owasp/public_html/membres.php?membreId=3 UNION SELECT nom, mdp FROM compte</font>  après l'URL<br/><br/>
+            pour exploiter la faille, utilisez cete URL : <font color="red"><?= $urlsite;?>owasp/public_html/membres.php?membreId=3 UNION SELECT nom, mdp FROM compte</font> <br/><br/>
             toutes les données des comptes s'affichent<br/><br/><br/>
             
                 <?php
