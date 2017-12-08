@@ -47,3 +47,7 @@ From :   http://localhost/owasp/public_html/news.php
 Date :   08-12-2017 à 05h35
 Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
 ------------------------------
+From :   http://localhost/owasp/public_html/news.php
+Date :   08-12-2017 à 07h16
+Cookie : seenAlert=yes; PHPSESSID=1u7rfbk5sphjillqclt8kvjiu7
+------------------------------

@@ -48,7 +48,7 @@ require_once __DIR__ . '/../db_config.php';
             <br/>
             <b>POC:</b>
             Pour faire supprimer une news à un administrateur, il suffit de lui envoyer le lien suivant : <br/>
-            http://administration.io/csrf.php?newsId=IDdeLaNewsASupprimer <br/>
+            http://79.137.87.179/csrf.php?newsId=IDdeLaNewsASupprimer <br/>
             <br/>
             Pour se protéger, il faudrait ajouter un jeton CSRF sur la page.<br/>
             Ce jeton est généré lors de la création du formulaire, et on vérifie qu'il concorde avec l'utilisateur qui clique sur le formulaire.
