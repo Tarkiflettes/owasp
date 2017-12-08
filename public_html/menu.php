@@ -17,11 +17,15 @@
                             <a href="membres.php?membreId=1">injection SQL</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/partenariats.php'){ echo 'active';} ?>">
-                            <a href="partenariats.php">partenariats</a>
+                            <a href="partenariats.php">Faille API</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/notif.php'){ echo 'active';} ?>">
-                            <a href="notif.php">notif</a>
+                            <a href="notif.php">Faille Htaccess</a>
                         </li>
+                        <li class="<?php if($_SERVER['REQUEST_URI'] == '/eval.php'){ echo 'active';} ?>">
+                            <a href="eval.php?ev=phpinfo();">Faille Eval()</a>
+                        </li>
+                        
                     <?php endif ?>
                 </ul>
 
