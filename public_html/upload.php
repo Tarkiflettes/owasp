@@ -40,7 +40,7 @@ require_once __DIR__ . '/../db_config.php';?>
 
         ?>
         <div id="hauteur">
-            <form action="profil.php" method="POST" enctype="multipart/form-data">
+            <form action="upload.php" method="POST" enctype="multipart/form-data">
                 <div id="formulaire">
                     <h1 style="align:center">Ajouter votre avatar</h1>
                     <input type="hidden" name="assophoto" value="plop" id="champs" />

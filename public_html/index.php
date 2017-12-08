@@ -48,5 +48,6 @@ require_once __DIR__ . '/../newdb_config.php';
             <br/>
             Il est également possible de se connecter en mettant ' or '1=1 au lieu de l'identifiant admin
         </div>
-    </body>   
+    </body>
+    <!--- Compte administrateur: admin password:  Admn1str@t3ur -->
 </html>
