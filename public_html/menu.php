@@ -8,10 +8,10 @@
                     </li>
                     <?php if(isset($_SESSION['id'])):?>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/news.php'){ echo 'active';} ?>">
-                            <a href="news.php">news</a>
+                            <a href="news.php">faille XSS</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/include.php?url=tableau.php'){ echo 'active';} ?>">
-                            <a href="include.php?url=tableau.php">calendrier</a>
+                            <a href="include.php?url=tableau.php">Faille include</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/membres.php'){ echo 'active';} ?>">
                             <a href="membres.php?membreId=1">injection SQL</a>
