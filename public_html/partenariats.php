@@ -10,9 +10,8 @@
   <body>
   <?php
   session_start();
-  require_once __DIR__ . '/../newdb_config.php';
-  // connecting to db
-  $db = new PDO('mysql:host='.DB_SERVER.';dbname='.DB_DATABASE, DB_USER, DB_PASSWORD) or die(mysql_error());
+  require_once __DIR__ . '/../db_config.php';
+
   ?>
   
     <div class="jumboton">
@@ -23,6 +22,8 @@
 
     <?php include('menu.php'); ?>
 
-
+    <form action="api/getcalendrier.php" method="post">
+        <input type="submit" id="envoyer" name="utiliser l'api" value="utiliser l'api">
+    <form>
   <body/>   
 </html>

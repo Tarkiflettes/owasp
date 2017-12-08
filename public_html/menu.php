@@ -17,20 +17,13 @@
                             <a href="membres.php?membreId=1">injection SQL</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/partenariats.php'){ echo 'active';} ?>">
-                            <a href="partenariats.php">partenariats</a>
+                            <a href="partenariats.php">URI non secure</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/notif.php'){ echo 'active';} ?>">
                             <a href="notif.php">notif</a>
                         </li>
                     <?php endif ?>
                 </ul>
-
-                <?php
-                $req = $db->prepare("SELECT * FROM nomasso WHERE idasso = :id");
-
-                $req->execute(array(':id' => $_SESSION['id']));
-                $donnees = $req->fetch();
-                ?>
 
                 <?php if (!isset($_SESSION['id'])): ?>
 
@@ -51,7 +44,7 @@
                         <button type='submit' class='btn btn-success' >Deconnexion</button>
                     </form>
                     <form class='navbar-form navbar-right inline-form' action='profil.php' method='POST'>
-                        <button type='submit' class='btn btn-success' >Profil <?= $donnees['nomasso'] ?></button>
+                        <button type='submit' class='btn btn-success' >Profil</button>
                     </form>
                 <?php endif ?>
                 ?>
