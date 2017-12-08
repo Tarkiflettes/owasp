@@ -11,9 +11,7 @@
   <body>
   <?php
   session_start();
-  require_once __DIR__ . '/../newdb_config.php';
-  // connecting to db
-  $db = new PDO('mysql:host='.DB_SERVER.';dbname='.DB_DATABASE, DB_USER, DB_PASSWORD) or die(mysql_error());
+  require_once __DIR__ . '/../db_config.php';
   ?>
     <div class="jumboton">
       <div class="container">
@@ -44,8 +42,7 @@
         ?>
 <div class="body-center"><b>Description:</b><br/>
             Cette page contient une faille XSS.
-            Vous pouvez ajouter une news <br/>></script>
-avec la faille suivante : "&lt;script&gt;alert(Oh tiens, une faille xss);&lt;/script&gt;"
+            Vous pouvez ajouter une news avec la faille suivante dans le texte : <font color="red">&lt;script&gt;alert('Oh tiens, une faille xss');&lt;/script&gt;</font>
             <br/>
             Une fenêtre d'alerte s'affiche alors sur la page<br/><br/><br/>
             
@@ -78,7 +75,7 @@ avec la faille suivante : "&lt;script&gt;alert(Oh tiens, une faille xss);&lt;/sc
               <div id="formulaire">
                 <h1>Ajouter news</h1>
                 <label>nom</label>
-                <input type="text" name="nom" id="champs"  required autofocus />
+                <input type="text" name="nom" id="champs"/>
                 <label>contenu</label>
                 <td colspan="2"><textarea name="desc" cols="50" rows="2" id ="champs1"></textarea></td>
                 

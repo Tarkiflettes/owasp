@@ -14,7 +14,7 @@
                             <a href="include.php?url=tableau.php">calendrier</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/membres.php'){ echo 'active';} ?>">
-                            <a href="membres.php?membreId=1">membres</a>
+                            <a href="membres.php?membreId=1">injection SQL</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/partenariats.php'){ echo 'active';} ?>">
                             <a href="partenariats.php">partenariats</a>
