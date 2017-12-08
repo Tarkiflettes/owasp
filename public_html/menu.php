@@ -10,8 +10,8 @@
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/news.php'){ echo 'active';} ?>">
                             <a href="news.php">news</a>
                         </li>
-                        <li class="<?php if($_SERVER['REQUEST_URI'] == '/calendrier.php'){ echo 'active';} ?>">
-                            <a href="include.php">calendrier</a>
+                        <li class="<?php if($_SERVER['REQUEST_URI'] == '/include.php?url=tableau.php'){ echo 'active';} ?>">
+                            <a href="include.php?url=tableau.php">Faille include</a>
                         </li>
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/membres.php'){ echo 'active';} ?>">
                             <a href="membres.php">membres</a>

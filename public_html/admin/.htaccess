@@ -1,0 +1,8 @@
+AuthName "Page d'administration secrete"
+AuthType Basic
+AuthUserFile "/home/anonymous/www/html/owasp/public_html/admin/.htpasswd"
+Require valid-user
+
+<Limit GET POST>
+	require valid-user
+</Limit>

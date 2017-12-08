@@ -20,7 +20,22 @@ require_once __DIR__ . '/../db_config.php';
         </div>
         <?php include('menu.php'); ?>
         <div>
-            <iframe src="<?= $_GET['url'] ?>" name="contenu" width="100%" height="100%" marginwidth="0" marginheight="0" scrolling="Auto" frameborder="0" id="contenu"></iframe>
+            <iframe src="<?php echo $_GET['url'] ?>" name="contenu" width="100%" height="300px" marginwidth="0" marginheight="0" scrolling="Auto" frameborder="0" id="contenu"></iframe>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <b>Description:</b></br>
+        Cette page contient une iframe utilisant le fichier présent dans la requête get.<br/>
+        Cette faille est appelée la faille include. <br/>
+        <br/>
+        <b>Attaque :</b><br/>
+        Un attaquant peut utiliser cette page pour récupérer des identifiants d'un htacces par exemple. <br/>
+        Il existe un répertoire protégé par un htaccess (/admin).<br/>
+        L'attaquant peut donc faire un fichier php contenant uniquement la ligne ci-dessous sur son serveur et l'executer en mettant l'url en get.
+        <br/>
+        <br/>
+        <b>Script : </b><br/>
+            echo file_get_contents('./admin/.htpasswd');<br/>
     </body>
 </html>
