@@ -25,6 +25,12 @@
                         <li class="<?php if($_SERVER['REQUEST_URI'] == '/eval.php'){ echo 'active';} ?>">
                             <a href="eval.php?ev=phpinfo();">Faille Eval()</a>
                         </li>
+                        <li class="<?php if($_SERVER['REQUEST_URI'] == '/upload.php'){ echo 'active';} ?>">
+                            <a href="upload.php">Faille Upload</a>
+                        </li>
+                        <li class="<?php if($_SERVER['REQUEST_URI'] == '/csrf.php'){ echo 'active';} ?>">
+                            <a href="csrf.php">Faille CSRF</a>
+                        </li>
                         
                     <?php endif ?>
                 </ul>
@@ -46,9 +52,6 @@
                 <?php else: ?>
                     <form class='navbar-form navbar-right inline-form' action='deconnexion.php' method='POST'>
                         <button type='submit' class='btn btn-success' >Deconnexion</button>
-                    </form>
-                    <form class='navbar-form navbar-right inline-form' action='profil.php' method='POST'>
-                        <button type='submit' class='btn btn-success' >Profil</button>
                     </form>
                 <?php endif ?>
                 ?>

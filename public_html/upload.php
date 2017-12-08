@@ -4,7 +4,7 @@ require_once __DIR__ . '/../db_config.php';?>
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>profil</title>
+        <title>Upload</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="css.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
