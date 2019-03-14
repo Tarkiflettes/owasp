@@ -17,13 +17,6 @@ Inclure dans votre application WEB, dont les spécifications vous sont données 
   
 ![owasp](https://i.imgur.com/kwiBSoi.jpg)
 
-## Authors
-
-* **Alexandre Chabane** - [alexandrechabs](https://github.com/alexandrechabs)  
-* **Théophile Demaegdt** - [theophileesiea](https://github.com/theophileesiea)  
-
-See also the list of [contributors](https://github.com/Tarkiflettes/owasp/graphs/contributors) who participated in this project.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
